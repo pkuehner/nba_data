@@ -1,2 +1,4 @@
 # nba_data
-Data from NBA games for anyone to use
+This repo contains json files with the stats for any regular season nba game from last season (19-20). So far there are regular, advanced and defense boxscores, rotation, game summary data and play by play data. They are scraped off of the stats.nba.com website.
+
+There is also an additional processed play_by_play dataset for each game, where stats are accumulated for each lineup that was used in the game. This is very useful, because the actual play by play data is very much text based and it's not that easy to parse into a good format. Beware that offensive rebounds count as an extra possession in this data set (Subtract o_reb from poss in order to get the "real" number of possessions. I suggest using the [nba-api](https://pypi.org/project/nba-api/) for python in order to connect team and player ids to the actual names. In the future I'll add more data and also a better documentary for existing data.
